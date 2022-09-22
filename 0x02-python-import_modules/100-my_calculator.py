@@ -4,8 +4,7 @@ if __name__ == "__main__":
     import sys
     from calculator_1 import add, sub, mul, div
     ac = len(sys.argv)
-    print(ac)
-    if ac != 4:
+    if ac < 4:
         print("Usage: {} <a> <operator> <b>")
         sys.exit(1)
     a, b = int(sys.argv[1]), int(sys.argv[3])
