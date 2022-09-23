@@ -5,10 +5,10 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     ac = len(sys.argv)
     if ac < 4:
-        print("Usage: {} <a> <operator> <b>")
+        print("Usage: {} <a> <operator> <b>".format(sys.argv[0]))
         sys.exit(1)
-    a, b = int(sys.argv[1]), int(sys.argv[3])
     operator = sys.argv[2]
+    a, b = int(sys.argv[1]), int(sys.argv[3])
     if operator == '+':
         print("{} {} {} = {}".format(a, operator, b, add(a, b)))
         sys.exit(0)
