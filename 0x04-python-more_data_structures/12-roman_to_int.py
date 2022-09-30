@@ -14,8 +14,8 @@ def roman_to_int(roman_string):
     lent = len(roman_string)
 
     while i < lent:
+        a = li.index(roman_string[i])
         if i + 1 < lent:
-            a = li.index(roman_string[i])
             b = li.index(roman_string[i + 1])
         else:
             break
