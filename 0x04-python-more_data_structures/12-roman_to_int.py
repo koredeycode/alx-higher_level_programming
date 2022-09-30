@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if not roman_string or not roman_string.isalpha:
+    if not roman_string or not isinstance(roman_string, str):
         return (0)
     m = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
 
@@ -14,11 +14,11 @@ def roman_to_int(roman_string):
     lent = len(roman_string)
 
     while i < lent:
-        a = li.index(roman_string[i])
         if i + 1 < lent:
+            a = li.index(roman_string[i])
             b = li.index(roman_string[i + 1])
         else:
-            b = 0
+            break
         if a >= b:
             ret += m.get(li[a])
             i += 1
