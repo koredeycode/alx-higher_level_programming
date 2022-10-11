@@ -9,5 +9,5 @@ class Square:
     Attributes:
         __size: size of the square
     """
-    def __init__(self, size):
-        self.__size = size
+    def __init__(self, value):
+        self.__size = value

@@ -35,16 +35,16 @@ class Square:
 
 
     @size.setter
-    def size(self, size=0):
+    def size(self, value=0):
         """ Change the size of a  Square.
         Args:
-            size (int): the size of the squar.
+            value (int): the size of the squar.
         """
-        if not isinstance(size, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        self.__size = value
     def my_print(self):
         for i in range(self.__size):
             for j in range(self.__size):
