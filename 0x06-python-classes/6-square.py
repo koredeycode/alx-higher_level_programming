@@ -40,7 +40,10 @@ class Square:
     def position(self, value):
         """Set the square position"""
         b1 = not all(isinstance(n, int) for n in value)
-        b2 = not all(n >= 0 for n in value)
+        if not b1:
+            b2 = not all(n >= 0 for n in value)
+        else:
+            b2 = 0
         b3 = not isinstance(value, tuple)
         b4 = len(value) != 2
         if b1 or b2 or b3 or b4:
