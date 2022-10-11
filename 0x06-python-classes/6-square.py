@@ -21,7 +21,10 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
         b1 = not all(isinstance(n, int) for n in position)
-        b2 = not all(n >= 0 for n in position)
+        if not b1:
+            b2 = not all(n >= 0 for n in position)
+        else:
+            b2 = 0
         b3 = not isinstance(position, tuple)
         b4 = len(position) != 2
         if b1 or b2 or b3 or b4:
