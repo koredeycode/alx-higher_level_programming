@@ -101,7 +101,7 @@ class Square:
                 tmp += "#"
             aList.append(tmp)
         return ("\n".join(aList))
-    
+
     def __gt__(self, other):
         """Define the > comparison"""
         return (self.area() > other.area())
