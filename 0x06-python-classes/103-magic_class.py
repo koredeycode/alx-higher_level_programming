@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""The module contain the implementation of a class
+inferred from a given bytecode"""
 import math
 
 
