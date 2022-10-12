@@ -9,7 +9,7 @@ class MagicClass:
     """
     def __init__(self, radius):
         """Initialization function"""
-        if not isinstance(radius, int) and not isinstance(radius, float):
+        if type(radius) is not int and type(radius) is not float:
             raise TypeError("radius is not a number")
         self.__radius = radius
 
