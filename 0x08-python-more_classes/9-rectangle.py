@@ -115,4 +115,4 @@ class Rectangle:
          Returns:
             a triangle instance
         """
-        return (cls(size, size))
+        return (Rectangle(size, size))
