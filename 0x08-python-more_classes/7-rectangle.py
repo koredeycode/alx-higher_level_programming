@@ -67,12 +67,15 @@ class Rectangle:
         """return the string representation of the rectangle.
         Using the character "#"
         """
-        ret_str = ""
+        if self.width == 0 or self.height == 0:
+            return ("")
+        ret = []
         for i in range(self.height):
             for j in range(self.width):
-                ret_str += str(Rectangle.print_symbol)
-            ret_str += "\n"
-        return (ret_str[:-1])
+                ret.append(str(self.print_symbol))
+            if i != self.height - 1:
+                ret.append("\n")
+        return ("".join(ret))
 
     def __repr__(self):
         """return the canonical string representation of the rectangle.
