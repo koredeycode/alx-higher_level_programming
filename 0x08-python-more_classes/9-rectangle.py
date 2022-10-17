@@ -112,5 +112,7 @@ class Rectangle:
         width == height == size
          Arguments:
             size (int): size of the square
+         Returns:
+            a triangle instance
         """
         return (cls(size, size))
