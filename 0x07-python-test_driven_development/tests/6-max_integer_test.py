@@ -19,6 +19,11 @@ class TestMaxInteger(unittest.TestCase):
         """
         self.assertEqual(max_int([2, 4, 6, 7, 8, 9]), 9)
 
+    def test_max_at_beginning(self):
+        """Test a list which max is at the beginning
+        """
+        self.assertEqual(max_int([20, 1, 6, 0, 8, 9]), 9)
+
     def test_empty_list(self):
         """Test an empty list"""
         self.assertEqual(max_int([]), None)
