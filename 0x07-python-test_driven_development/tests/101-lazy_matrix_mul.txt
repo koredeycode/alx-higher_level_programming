@@ -32,3 +32,15 @@ setting an array element with a sequence.
 ...     print(e)
 ...
 shapes (2,3) and (2,2) not aligned: 3 (dim 1) != 2 (dim 0)
+>>> try:
+...     lmm([[5, 6], [2, 3]])
+... except Exception as e:
+...     print(e)
+...
+lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+>>> try:
+...     lmm()
+... except Exception as e:
+...     print(e)
+...
+lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
