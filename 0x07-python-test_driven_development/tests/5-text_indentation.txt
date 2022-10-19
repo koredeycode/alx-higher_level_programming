@@ -1,0 +1,28 @@
+>>> txt = __import__('5-text_indentation').text_indentation
+>>> txt("Hello World. Can you hear me? This is me.")
+Hello World.
+<BLANKLINE>
+Can you hear me?
+<BLANKLINE>
+This is me.
+<BLANKLINE>
+>>> txt("Hello World. Can you hear me?? I love: C. Python. Javascript")
+Hello World.
+<BLANKLINE>
+Can you hear me?
+<BLANKLINE>
+?
+<BLANKLINE>
+I love:
+<BLANKLINE>
+C.
+<BLANKLINE>
+Python.
+<BLANKLINE>
+Javascript
+>>> try:
+...     txt(None)
+... except Exception as e:
+...     print(e)
+...
+text must be a string

@@ -1,0 +1,37 @@
+>>> foo = __import__("100-matrix_mul").matrix_mul
+>>> try:
+...     foo([[1, 2], [3, 4]], "matrix B")
+... except Exception as e:
+...     print(e)
+...
+m_b must be a list
+>>> try:
+...     foo([[1, 2], [3, 4]], [[1, 2], "second"])
+... except Exception as e:
+...     print(e)
+...
+m_b must be a list of lists
+>>> try:
+...     foo([[1, 2], [3, 4]], [[1, 2], [3, "four"]])
+... except Exception as e:
+...     print(e)
+...
+m_b contain only integers or floats
+>>> try:
+...     foo([], [[]])
+... except Exception as e:
+...     print(e)
+...
+m_a can't be empty
+>>> try:
+...     foo([[1, 2], [3, 4]], [[1, 2], [3, 4, 5]])
+... except Exception as e:
+...     print(e)
+...
+each row of m_b must be of the same size
+>>> try:
+...     foo([[1, 2, 7], [3, 4, 6]], [[1, 2], [3, 4]])
+... except Exception as e:
+...     print(e)
+...
+m_a and m_b can't be multiplied
