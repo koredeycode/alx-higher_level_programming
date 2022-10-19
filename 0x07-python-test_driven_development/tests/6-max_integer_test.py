@@ -22,7 +22,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_max_at_beginning(self):
         """Test a list which max is at the beginning
         """
-        self.assertEqual(max_int([20, 1, 6, 0, 8, 9]), 9)
+        self.assertEqual(max_int([20, 1, 6, 0, 8, 9]), 20)
 
     def test_empty_list(self):
         """Test an empty list"""
