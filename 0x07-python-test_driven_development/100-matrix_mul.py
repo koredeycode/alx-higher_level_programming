@@ -49,9 +49,9 @@ def matrix_mul(m_a, m_b):
         raise ValueError("m_b can't be empty")
     types = [int, float]
     if not all([type(n) in types for row in m_a for n in row]):
-        raise TypeError("m_a contain only integers or floats")
+        raise TypeError("m_a should contain only integers or floats")
     if not all([type(n) in types for row in m_b for n in row]):
-        raise TypeError("m_b contain only integers or floats")
+        raise TypeError("m_b should contain only integers or floats")
     if len(set([len(row) for row in m_a])) != 1:
         raise TypeError("each row of m_a must be of the same size")
     if len(set([len(row) for row in m_b])) != 1:
