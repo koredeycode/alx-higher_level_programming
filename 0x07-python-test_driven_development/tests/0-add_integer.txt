@@ -21,3 +21,5 @@ a must be an integer
 ... 	print(e)
 ...
 a must be an integer
+>>> print(addor(int("98")))
+98
