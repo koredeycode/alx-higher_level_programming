@@ -36,3 +36,9 @@ matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
 ...     print(e)
 ...
 matrix_divided() missing 1 required positional argument: 'div'
+>>> try:
+...     md([[2, 3],[2, 3]], "8")
+... except Exception as e:
+...     print(e)
+...
+div must be a number
