@@ -1,0 +1,34 @@
+>>> lmm = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+>>> lmm([[1, 2], [3, 4]], [[5, 6], [7, 8]])
+array([[19, 22],
+       [43, 50]])
+>>> try:
+...     lmm("Holberton", [[5, 6], [7, 8]])
+... except Exception as e:
+...     print(e)
+...
+Scalar operands are not allowed, use '*' instead
+>>> try:
+...     lmm([[]], [[5, 6], [7, 8]])
+... except Exception as e:
+...     print(e)
+...
+shapes (1,0) and (2,2) not aligned: 0 (dim 1) != 2 (dim 0)
+>>> try:
+...     lmm([[1, "2"], [3, 4]], [[5, 6], [7, 8]])
+... except Exception as e:
+...     print(e)
+...
+invalid data type for einsum
+>>> try:
+...     lmm([[5, 6, 10], [7, 8]], [[5, 6], [7, 8]])
+... except Exception as e:
+...     print(e)
+...
+setting an array element with a sequence.
+>>> try:
+...     lmm([[1, 2, 3], [3, 4, 5]], [[1, 2], [3, 4]])
+... except Exception as e:
+...     print(e)
+...
+shapes (2,3) and (2,2) not aligned: 3 (dim 1) != 2 (dim 0)
