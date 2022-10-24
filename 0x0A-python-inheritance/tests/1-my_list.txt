@@ -33,3 +33,14 @@
 [1, 20, 21, 22, 23]
 >>> print(ml2)
 [1, 20, 21, 22, 23]
+>>> ml3 = ML()
+>>> ml3.append(2)
+>>> ml3.append(2)
+>>> ml3.append(2)
+>>> ml3.append(2)
+>>> print(ml3)
+[2, 2, 2, 2]
+>>> ml3.print_sorted()
+[2, 2, 2, 2]
+>>> print(ml3)
+[2, 2, 2, 2]
