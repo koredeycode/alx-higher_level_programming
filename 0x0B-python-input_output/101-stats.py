@@ -1,10 +1,14 @@
 #!/usr/bin/python3
+"""this module is a scripts that reads stdin line by line
+and computes the metrics"""
+
 
 def print_stats(size, stat):
     """Print the stats infos"""
     print("File size: {}".format(size))
     for k in sorted(stat):
         print("{}: {}".format(k, stat[k]))
+
 
 with open(0, "r", encoding="utf-8") as std:
     fsize = 0
