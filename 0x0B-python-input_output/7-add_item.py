@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+"""This module contains the add_item function"""
+import sys
+save = __import__("5-save_to_json_file").save_to_json_file
+load = __import__("6-load_from_json_file").load_from_json_file
+
+args = sys.argv[1:]
+
+try:
+    items = load("add_item.json")
+except FileNotFoundError:
+    items = []
+items.extend(args)
+save(items, "add_item.json")
