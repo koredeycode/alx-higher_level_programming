@@ -8,7 +8,7 @@ def print_stats(size, stat):
     print("File size: {}".format(size))
     for k in sorted(stat):
         if stat[k] != 0:
-           print("{}: {}".format(k, stat[k]))
+            print("{}: {}".format(k, stat[k]))
 
 
 with open(0, "r", encoding="utf-8") as std:
