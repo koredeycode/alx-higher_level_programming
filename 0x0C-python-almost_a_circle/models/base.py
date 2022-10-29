@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module contains the class Base"""
 import json
+import turtle
 
 
 class Base:
@@ -93,3 +94,34 @@ class Base:
                 
         except FileNotFoundError:
             return ([])
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        t = turtle.Turtle()
+        t.hideturtle()
+        t.pensize(3)
+        t.color("blue")
+        t.penup()
+        for i in list_rectangles:
+            t.goto(i.x, i.y)
+            t.pendown()
+            t.fd(i.width)
+            t.right(90)
+            t.fd(i.height)
+            t.right(90)
+            t.fd(i.width)
+            t.right(90)
+            t.fd(i.height)
+            t.penup()
+        for i in list_squares:
+            t.goto(i.x, i.y)
+            t.pendown()
+            t.fd(i.width)
+            t.right(90)
+            t.fd(i.height)
+            t.right(90)
+            t.fd(i.width)
+            t.right(90)
+            t.fd(i.height)
+            t.penup()
+        turtle.exitonclick()
