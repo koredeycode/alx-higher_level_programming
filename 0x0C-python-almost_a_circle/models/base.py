@@ -80,7 +80,7 @@ class Base:
                     for i in list_dicts:
                         st += ",".join([str(w) for w in (i["id"], i["size"], i["x"], i["y"])])
                         st += "\n"
-                f.write(st[:-1]) 
+                f.write(st[:-1])
 
     @classmethod
     def load_from_file_csv(cls):
@@ -91,7 +91,6 @@ class Base:
                 a = f.read()
                 li = [[int(i) for i in v.split(",")] for v in a.split()]
                 return [cls(*i[1:], i[0]) for i in li]
-                
         except FileNotFoundError:
             return ([])
 
