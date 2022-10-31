@@ -32,7 +32,7 @@ class Base:
                 f.write("[]")
             else:
                 list_dicts = [i.to_dictionary() for i in listobjs]
-            f.write(Base.to_json_string(list_dicts))
+                f.write(Base.to_json_string(list_dicts))
 
     @staticmethod
     def from_json_string(json_string):
@@ -68,17 +68,19 @@ class Base:
         filename = cls.__name__ + ".csv"
         with (open(filename, "w", encoding="utf-8")) as f:
             if list_objs is None or list_objs == []:
-                f.write("")
+                f.write("[]")
             else:
                 list_dicts = [i.to_dictionary() for i in list_objs]
                 st = ""
                 if cls.__name__ == "Rectangle":
                     for i in list_dicts:
-                        st += ",".join([str(w) for w in (i["id"], i["width"], i["height"], i["x"], i["y"])])
+                        st += ",".join([str(w) for w in (i["id"], i["width"],
+                                        i["height"], i["x"], i["y"])])
                         st += "\n"
                 else:
                     for i in list_dicts:
-                        st += ",".join([str(w) for w in (i["id"], i["size"], i["x"], i["y"])])
+                        st += ",".join([str(w) for w in (i["id"], i["size"],
+                                        i["x"], i["y"])])
                         st += "\n"
                 f.write(st[:-1])
 
@@ -89,6 +91,8 @@ class Base:
             filename = cls.__name__ + ".csv"
             with open(filename, "r") as f:
                 a = f.read()
+                if a == "[]":
+                    return ([])
                 li = [[int(i) for i in v.split(",")] for v in a.split()]
                 return [cls(*i[1:], i[0]) for i in li]
         except FileNotFoundError:
@@ -96,6 +100,8 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
+        """ A function that opens a window and draws all the
+        Rectangles and Squares"""
         t = turtle.Turtle()
         t.screen.bgcolor("gold")
         t.hideturtle()
