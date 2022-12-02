@@ -1,2 +1,3 @@
-This directory contains project task files on python inheritance for alx higer level programming for the software engineering programme
-
+# Python-inheritance
+In this project, I learned about Python-inheritance as part of my projects for the ALX Software Engineering Programme
+* Koredeycode

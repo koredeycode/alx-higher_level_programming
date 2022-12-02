@@ -1,1 +1,3 @@
-This directory contains project task files on Python Object Oriented Programming for alx SE course
+# Python-classes
+In this project, I learned about Python-classes as part of my projects for the ALX Software Engineering Programme
+* Koredeycode

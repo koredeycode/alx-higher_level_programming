@@ -1,1 +1,3 @@
-This directory contains project task files on python input and output for the alx higher level programming for the alx software engineering program
+# Python-input_output
+In this project, I learned about Python-input_output as part of my projects for the ALX Software Engineering Programme
+* Koredeycode

@@ -1,1 +1,3 @@
-This directory contains the project fileson python exceptions for alx S.E higher levl programming with python.
+# Python-exceptions
+In this project, I learned about Python-exceptions as part of my projects for the ALX Software Engineering Programme
+* Koredeycode

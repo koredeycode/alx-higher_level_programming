@@ -1,1 +1,3 @@
-This directory contain project taskfiles on python data structures for alx higher level programming
+# Python-data_structures
+In this project, I learned about Python-data_structures as part of my projects for the ALX Software Engineering Programme
+* Koredeycode
