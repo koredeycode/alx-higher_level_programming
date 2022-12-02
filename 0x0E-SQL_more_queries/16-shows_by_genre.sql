@@ -1,4 +1,4 @@
- -- list all the shows by genre
+-- list all the shows by genre
 
 SELECT title, name
 FROM tv_shows
