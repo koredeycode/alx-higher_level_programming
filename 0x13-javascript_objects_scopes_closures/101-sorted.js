@@ -10,7 +10,7 @@ for (const i in uniqValues) {
   for (const j in entries) {
     if (entries[j][1] === uniqValues[i]) {
       li.push(entries[j][0]);
-	}
+    }
   }
   newObj[uniqValues[i]] = li;
 }
