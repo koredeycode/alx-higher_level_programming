@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Lists all states from the database"""
 from sys import argv
 import MySQLdb
 if __name__ == "__main__":

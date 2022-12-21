@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""List all values in the states table where name matches the argument"""
 from sys import argv
 import MySQLdb
 

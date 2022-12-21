@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-
+"""displays all values in the states table where name matches the argument
+    free from sql injection"""
 from sys import argv
 import MySQLdb
 
