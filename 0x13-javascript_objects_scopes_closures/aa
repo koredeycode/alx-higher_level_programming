@@ -1,0 +1,4 @@
+#!/usr/bin/node
+
+const hello = require('./a').world;
+hello();
