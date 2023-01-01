@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Contains the class definition of a State and a Base instance"""
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String, MetaData
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 
 Base = declarative_base()

@@ -1,0 +1,31 @@
+CREATE TABLE customer (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ postalCode VARCHAR(15) default NULL,
+)
+ 
+CREATE TABLE product (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ product_name VARCHAR(50) NOT NULL,
+ price VARCHAR(7) NOT NULL,
+ qty VARCHAR(4) NOT NULL
+)
+ 
+CREATE TABLE transactions (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ cust_id INT,
+ timedate TIMESTAMP,
+ FOREIGN KEY(cust_id)
+     REFERENCES customer(id),
+)
+ 
+CREATE TABLE product_transaction (
+ prod_id INT,
+ trans_id INT,
+ PRIMARY KEY(prod_id, trans_id),
+ FOREIGN KEY(prod_id)
+     REFERENCES product(id),
+ FOREIGN KEY(trans_id)
+     REFERENCES transactions(id)
+)
+
+write sql alchemy orm code creating classes that map to each table each in the above sql code taking note of the relationships among them in separate file in the format tablename.py
