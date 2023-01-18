@@ -3,5 +3,6 @@
 import urllib.request
 import sys 
 url = sys.argv[1]
-with urllib.request.urlopen(url) as response:
+request = urllib.request.Request(url)
+with urllib.request.urlopen(request) as response:
     print(response.getheader('X-Request-Id'))
