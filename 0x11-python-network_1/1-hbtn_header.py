@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """This module do something"""
 import urllib.request
-with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
-    content = response.read()
-    print("Body response:")
-    print("\ttype: {}".format(type(content)))
-    print("\tcontent: {}".format(content))
-    print("\tutf8 content: {}".format(content.decode()))
+import sys 
+url = sys.argv[1]
+with urllib.request.urlopen(url) as response:
+    print(response.getheader('X-Request-Id'))
