@@ -10,9 +10,11 @@ if __name__ == "__main__":
     except IndexError:
         values["q"] = ""
     with requests.post(url, data=values) as response:
-        if not obj:
-            print("No result")
-        elif type(obj) is not dict:
+        try:
+            obj = response.json()
+            if obj == {}:
+                print("No result")
+            else:
+                print("[{}] {}".format(obj.get("id"), obj.get("name")))
+        except ValueError:
             print("Not a valid JSON")
-        else:
-            print("[{}] {}".format(obj.get("id"), obj.get("name")))
