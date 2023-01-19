@@ -7,5 +7,5 @@ if __name__ == "__main__":
     values = {}
     values["email"] = sys.argv[2]
     with requests.post(url, data=values) as response:
-        content = response.content
+        content = response.text
         print("{}".format(content))
