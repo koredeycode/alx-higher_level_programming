@@ -13,7 +13,7 @@ def find_peak(lint):
         return lint[0]
     if n == 2:
         return max(lint)
-    if lint[mid] >= max(lint[mid - 1], lint[mid + 1]):
+    if lint[mid] > lint[mid - 1] and lint[mid] > lint[mid + 1]:
         return lint[mid]
     if lint[mid] < lint[mid + 1]:
         return find_peak(lint[mid:])
